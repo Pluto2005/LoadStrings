@@ -1760,3 +1760,7 @@ function Library:Initiate()
     return AncestorFunctions;
 end;
 return Library
+
+if game.CoreGui:FindFirstChild("Gunna") then
+    game.CoreGui["Gunna"]:Destroy()
+end
