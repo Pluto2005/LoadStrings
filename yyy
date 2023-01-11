@@ -41,6 +41,10 @@ function Library:Initiate()
     local Categories_2 = Instance.new("Frame")
 
     --Properties:
+    
+    if game.CoreGui:FindFirstChild("Gunna") then
+    game.CoreGui["Gunna"]:Destroy()
+end
 
     Ancestor.Name = "Gunna"
     Ancestor.Parent = game.CoreGui
@@ -1761,6 +1765,4 @@ function Library:Initiate()
 end;
 return Library
 
-if game.CoreGui:FindFirstChild("Gunna") then
-    game.CoreGui["Gunna"]:Destroy()
-end
+:Initiate();
