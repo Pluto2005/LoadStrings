@@ -1757,11 +1757,6 @@ function Library:Initiate()
     UICorner_2.Parent = Categories
     UICorner_2.CornerRadius=UDim.new(0,6)
     return AncestorFunctions;
-    
-        if game.CoreGui:FindFirstChild("Gunna") then
-    game.CoreGui["Gunna"]:Destroy()
-end
-
 end;
 return Library
 
