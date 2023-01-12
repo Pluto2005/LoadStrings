@@ -1157,9 +1157,3 @@ function library.new(library, name)
   end
   return window
 end
-
-repeat task.wait() until game:IsLoaded()
-
-if game.CoreGui:FindFirstChild("YouNameGuiHere") then
-    game.CoreGui["YouNameGuiHere"]:Destroy()
-end
