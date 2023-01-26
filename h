@@ -2797,7 +2797,7 @@ function Library:CreateWindow(...)
         local LeftSide = Library:Create('Frame', {
             BackgroundTransparency = 1;
             Position = UDim2.new(0, 8, 0, 8);
-            Size = UDim2.new(0.5, -12, 0, 507);
+            Size = UDim2.new(0.5, -12, 0, 200);
             ZIndex = 2;
             Parent = TabFrame;
         });
@@ -2805,7 +2805,7 @@ function Library:CreateWindow(...)
         local RightSide = Library:Create('Frame', {
             BackgroundTransparency = 1;
             Position = UDim2.new(0.5, 4, 0, 8);
-            Size = UDim2.new(0.5, -12, 0, 507);
+            Size = UDim2.new(0.5, -12, 0, 200);
             ZIndex = 2;
             Parent = TabFrame;
         });
