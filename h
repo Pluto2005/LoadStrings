@@ -431,7 +431,7 @@ do
         local HueSelectorOuter = Library:Create('Frame', {
             BorderColor3 = Color3.new(0, 0, 0);
             Position = UDim2.new(0, 208, 0, 25);
-            Size = UDim2.new(0, 15, 0, 200);
+            Size = UDim2.new(0, 15, 0, 140);
             ZIndex = 17;
             Parent = PickerFrameInner;
         });
