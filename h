@@ -485,13 +485,13 @@ do
             TextSize = 14;
             TextStrokeTransparency = 0;
             TextXAlignment = Enum.TextXAlignment.Left;
-            ZIndex = 20,
+            ZIndex = 9,
             Parent = HueBoxInner;
         });
 
         local RgbBoxBase = Library:Create(HueBoxOuter:Clone(), {
             Position = UDim2.new(0.5, 2, 0, 228),
-            Size = UDim2.new(0.5, -6, 0, 20),
+            Size = UDim2.new(0.5, -6, 0, 9),
             Parent = PickerFrameInner
         })  
 
@@ -784,7 +784,7 @@ do
                 local AbsPos, AbsSize = PickerFrameOuter.AbsolutePosition, PickerFrameOuter.AbsoluteSize;
 
                 if Mouse.X < AbsPos.X or Mouse.X > AbsPos.X + AbsSize.X
-                    or Mouse.Y < (AbsPos.Y - 20 - 1) or Mouse.Y > AbsPos.Y + AbsSize.Y then
+                    or Mouse.Y < (AbsPos.Y - 9 - 1) or Mouse.Y > AbsPos.Y + AbsSize.Y then
 
                     ColorPicker:Hide();
                 end;
@@ -1109,7 +1109,7 @@ do
                 local AbsPos, AbsSize = ModeSelectOuter.AbsolutePosition, ModeSelectOuter.AbsoluteSize;
 
                 if Mouse.X < AbsPos.X or Mouse.X > AbsPos.X + AbsSize.X
-                    or Mouse.Y < (AbsPos.Y - 20 - 1) or Mouse.Y > AbsPos.Y + AbsSize.Y then
+                    or Mouse.Y < (AbsPos.Y - 9 - 1) or Mouse.Y > AbsPos.Y + AbsSize.Y then
 
                     ModeSelectOuter.Visible = false;
                 end;
@@ -1234,7 +1234,7 @@ do
         local function CreateBaseButton(Button)
             local Outer = Library:Create('Frame', {
                 BorderColor3 = Color3.new(0, 0, 0);
-                Size = UDim2.new(1, -4, 0, 20);
+                Size = UDim2.new(1, -4, 0, 9);
                 ZIndex = 5;
             });
 
@@ -1361,7 +1361,7 @@ do
             
             ProcessButtonParams('SubButton', SubButton, ...)
 
-            self.Outer.Size = UDim2.new(0.5, -2, 0, 20)
+            self.Outer.Size = UDim2.new(0.5, -2, 0, 9)
 
             SubButton.Outer, SubButton.Inner, SubButton.Label = CreateBaseButton(SubButton)
 
@@ -1456,7 +1456,7 @@ do
 
         local TextBoxOuter = Library:Create('Frame', {
             BorderColor3 = Color3.new(0, 0, 0);
-            Size = UDim2.new(1, -4, 0, 20);
+            Size = UDim2.new(1, -4, 0, 9);
             ZIndex = 5;
             Parent = Container;
         });
@@ -1971,7 +1971,7 @@ do
 
         local DropdownOuter = Library:Create('Frame', {
             BorderColor3 = Color3.new(0, 0, 0);
-            Size = UDim2.new(1, -4, 0, 20);
+            Size = UDim2.new(1, -4, 0, 9);
             ZIndex = 5;
             Parent = Container;
         });
@@ -2049,9 +2049,9 @@ do
 
         local ListOuter = Library:Create('Frame', {
             BorderColor3 = Color3.new(0, 0, 0);
-            Position = UDim2.new(0, 4, 0, 20 + RelativeOffset + 1 + 20);
-            Size = UDim2.new(1, -8, 0, MAX_DROPDOWN_ITEMS * 20 + 2);
-            ZIndex = 20;
+            Position = UDim2.new(0, 4, 0, 9 + RelativeOffset + 1 + 9);
+            Size = UDim2.new(1, -8, 0, MAX_DROPDOWN_ITEMS * 9 + 2);
+            ZIndex = 9;
             Visible = false;
             Parent = Container.Parent;
         });
@@ -2151,7 +2151,7 @@ do
                     BackgroundColor3 = Library.MainColor;
                     BorderColor3 = Library.OutlineColor;
                     BorderMode = Enum.BorderMode.Middle;
-                    Size = UDim2.new(1, -1, 0, 20);
+                    Size = UDim2.new(1, -1, 0, 9);
                     ZIndex = 23;
                     Active = true,
                     Parent = Scrolling;
@@ -2242,9 +2242,9 @@ do
                 Buttons[Button] = Table;
             end;
 
-            local Y = math.clamp(Count * 20, 0, MAX_DROPDOWN_ITEMS * 20) + 1;
+            local Y = math.clamp(Count * 9, 0, MAX_DROPDOWN_ITEMS * 9) + 1;
             ListOuter.Size = UDim2.new(1, -8, 0, Y);
-            Scrolling.CanvasSize = UDim2.new(0, 0, 0, (Count * 20) + 1);
+            Scrolling.CanvasSize = UDim2.new(0, 0, 0, (Count * 9) + 1);
 
             -- ListOuter.Size = UDim2.new(1, -8, 0, (#Values * 20) + 2);
         end;
@@ -2306,7 +2306,7 @@ do
                 local AbsPos, AbsSize = ListOuter.AbsolutePosition, ListOuter.AbsoluteSize;
 
                 if Mouse.X < AbsPos.X or Mouse.X > AbsPos.X + AbsSize.X
-                    or Mouse.Y < (AbsPos.Y - 20 - 1) or Mouse.Y > AbsPos.Y + AbsSize.Y then
+                    or Mouse.Y < (AbsPos.Y - 9 - 1) or Mouse.Y > AbsPos.Y + AbsSize.Y then
 
                     Dropdown:CloseDropdown();
                 end;
@@ -2384,7 +2384,7 @@ do
     local WatermarkOuter = Library:Create('Frame', {
         BorderColor3 = Color3.new(0, 0, 0);
         Position = UDim2.new(0, 100, 0, -25);
-        Size = UDim2.new(0, 213, 0, 20);
+        Size = UDim2.new(0, 213, 0, 9);
         ZIndex = 200;
         Visible = false;
         Parent = ScreenGui;
@@ -2449,7 +2449,7 @@ do
         AnchorPoint = Vector2.new(0, 0.5);
         BorderColor3 = Color3.new(0, 0, 0);
         Position = UDim2.new(0, 10, 0.5, 0);
-        Size = UDim2.new(0, 210, 0, 20);
+        Size = UDim2.new(0, 210, 0, 9);
         Visible = false;
         ZIndex = 100;
         Parent = ScreenGui;
@@ -2895,8 +2895,8 @@ function Library:CreateWindow(...)
 
             local Container = Library:Create('Frame', {
                 BackgroundTransparency = 1;
-                Position = UDim2.new(0, 4, 0, 20);
-                Size = UDim2.new(1, -4, 1, -20);
+                Position = UDim2.new(0, 4, 0, 9);
+                Size = UDim2.new(1, -4, 1, -9);
                 ZIndex = 1;
                 Parent = BoxInner;
             });
@@ -2916,7 +2916,7 @@ function Library:CreateWindow(...)
                     end;
                 end;
 
-                BoxOuter.Size = UDim2.new(1, 0, 0, 20 + Size + 2);
+                BoxOuter.Size = UDim2.new(1, 0, 0, 9 + Size + 2);
             end;
 
             Groupbox.Container = Container;
@@ -3035,8 +3035,8 @@ function Library:CreateWindow(...)
                 });
 
                 local Container = Library:Create('Frame', {
-                    Position = UDim2.new(0, 4, 0, 20);
-                    Size = UDim2.new(1, -4, 1, -20);
+                    Position = UDim2.new(0, 4, 0, 9);
+                    Size = UDim2.new(1, -4, 1, -9);
                     ZIndex = 1;
                     Visible = false;
                     Parent = BoxInner;
@@ -3089,8 +3089,8 @@ function Library:CreateWindow(...)
                         end;
                     end;
 
-                    if BoxOuter.Size.Y.Offset < 20 + Size + 2 then
-                        BoxOuter.Size = UDim2.new(1, 0, 0, 20 + Size + 2);
+                    if BoxOuter.Size.Y.Offset < 9 + Size + 2 then
+                        BoxOuter.Size = UDim2.new(1, 0, 0, 9 + Size + 2);
                     end;
                 end;
 
