@@ -1135,3 +1135,4 @@ function library.new(library, name)
 end
 
 repeat task.wait() until game:IsLoaded()
+local window = library:new("HotTakis")
