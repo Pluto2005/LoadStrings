@@ -1133,3 +1133,5 @@ function library.new(library, name)
   end
   return window
 end
+
+repeat task.wait() until game:IsLoaded()
