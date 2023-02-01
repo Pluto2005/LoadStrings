@@ -130,7 +130,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	GlowTabHolder.BackgroundTransparency = 1.000
 	GlowTabHolder.BorderSizePixel = 0
 	GlowTabHolder.Position = UDim2.new(0, -15, 0, -15)
-	GlowTabHolder.Size = UDim2.new(1, 30, 1, 30)
+	GlowTabHolder.Size = UDim2.new(1, 30, 1, 20)
 	GlowTabHolder.ZIndex = 0
 	GlowTabHolder.Image = "rbxassetid://4996891970"
 	GlowTabHolder.ImageColor3 = Color3.fromRGB(15, 15, 15)
@@ -142,7 +142,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Title.BackgroundTransparency = 1.000
 	Title.Position = UDim2.new(0.097560972, 0, 0.0475206636, 0)
-	Title.Size = UDim2.new(0, 111, 0, 34)
+	Title.Size = UDim2.new(0, 111, 0, 40)
 	Title.Font = Enum.Font.GothamBold
 	Title.Text = text
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
